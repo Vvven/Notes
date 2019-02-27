@@ -38,7 +38,7 @@
 |   DEFAULT   |  默认值  |
 |  NOT NULL   |   非空   |
 
-#### 主键 pkey
+### 主键 pkey
 
 `PRIMARY KEY`: NOT NULL 和 UNIQUE 的结合。约束表中的一行，作为这一行的唯一标识符，不能有重复记录且不能为空
 
@@ -52,7 +52,7 @@ ALTER TABLE table_name DROP CONSTRAINT table_pkey;
 
 
 
-#### 外键 fkey
+### 外键 fkey
 
 `FOREIGN KEY`: 一个表可以有多个外键，每个外键必须 REFERENCES (参考) 另一个表的主键，被外键约束的列，取值必须在它参考的列中有对应值
 ```
@@ -68,7 +68,7 @@ ALTER TABLE table_name DROP CONSTRAINT table_fkey;
 
 
 
-#### 唯一约束
+### 唯一约束
 
 `UNIQUE`: 每个值都是唯一的，插入有重复时失败
 ```
@@ -84,7 +84,7 @@ CONSTRAINT table_ukey：为自定义键名，去掉也行，主键、外键同
 ALTER TABLE table_name DROP CONSTRAINT table_ukey;
 ```
 
-#### 默认值（缺省值）
+### 默认值（缺省值）
 
 `DEFAULT`: 插入数据为空时，使用默认值
 ```
@@ -106,7 +106,7 @@ ALTER TABLE table_name ALTER COLUMN column_name SET DEFAULT default_value;
 ALTER TABLE table_name ALTER COLUMN column_name DROP DEFAULT;
 ```
 
-#### 非空约束
+### 非空约束
 
 `NOT NULL`: 某列不能储存NULL值，即不能为空
 ```
@@ -120,19 +120,19 @@ ALTER TABLE table_name ALTER COLUMN column_name DROP NOT NULL;
 ~~ALTER TABLE table_name MODIFY column_name datatype NOT NULL;~~
 
 
-##更新表名
+## 更新表名
 ```
 ALTER TABLE table_oldname RENAME TO table_newname;
 ```
-##修改字段名字
+## 修改字段名字
 ```
 ALTER TABLE table_name RENAME column old_name TO new_name;
 ```
-##添加字段
+## 添加字段
 ```
 ALTER TABLE table_name ADD column_name datatype （约束）;
 ```
-##删除字段
+## 删除字段
 ```
 ALTER TABLE table_name DROP column_name;
 ```
