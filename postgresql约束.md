@@ -11,7 +11,7 @@
 - [ ] 6、修改字段类型
 - [x] 7、修改约束类型（算是可以勾了吧）
 - [ ] 8、时间类型
-- [ ] 9、日期计算（会有吗？）
+- [ ] 9、日期计算（可能有吧？）
 
 注：
 
@@ -23,7 +23,8 @@
 - COLUMN关键字据说是多余的，可省略
 - 删除列DROP COLUMN时，只是在数据库中简单标记为不可见，插入或更新时该列位置为NULL
 
-##约束
+
+## 约束
 
 约束可以在创建表时规定（通过 CREATE TABLE 语句），或者在表创建之后规定（通过 ALTER TABLE 语句）。
 
@@ -126,7 +127,7 @@ ALTER TABLE table_oldname RENAME TO table_newname;
 ```
 ## 修改字段名字
 ```
-ALTER TABLE table_name RENAME column old_name TO new_name;
+ALTER TABLE table_name RENAME COLUMN old_name TO new_name;
 ```
 ## 添加字段
 ```
